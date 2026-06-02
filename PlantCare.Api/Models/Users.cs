@@ -16,5 +16,5 @@ public class User
 
     public string? PhoneNumber { get; set; }
 
-    public List<Plant> Plants { get; set; } = new();
+    public ICollection<Plant> Plants { get; set; } = new List<Plant>();
 }

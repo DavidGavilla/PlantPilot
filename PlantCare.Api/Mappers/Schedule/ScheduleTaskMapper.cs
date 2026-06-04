@@ -1,0 +1,1 @@
+namespace PlantCare.Api.Mappers.Schedule;

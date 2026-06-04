@@ -25,6 +25,15 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        // Unique email
+        modelBuilder.Entity<User>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
+
+        modelBuilder.Entity<User>()
+            .Property(u => u.Email)
+            .IsRequired();
+
         // User 1 -> Many Plants
         modelBuilder.Entity<User>()
             .HasMany(u => u.Plants)
@@ -46,6 +55,11 @@ public class AppDbContext : DbContext
             .HasForeignKey<Diagnosis>(d => d.PlantPhotoId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        // Enforce one diagnosis per photo
+        modelBuilder.Entity<Diagnosis>()
+            .HasIndex(d => d.PlantPhotoId)
+            .IsUnique();
+
         // Diagnosis 1 -> Many Problems
         modelBuilder.Entity<Diagnosis>()
             .HasMany(d => d.Problems)
@@ -61,11 +75,13 @@ public class AppDbContext : DbContext
             .OnDelete(DeleteBehavior.Cascade);
 
         // Diagnosis 1 -> 0..1 Schedule
+        // Schedule can exist without Diagnosis
         modelBuilder.Entity<Diagnosis>()
             .HasOne(d => d.Schedule)
             .WithOne(s => s.Diagnosis)
             .HasForeignKey<Schedule>(s => s.DiagnosisId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.SetNull);
 
         // Schedule 1 -> Many Tasks
         modelBuilder.Entity<Schedule>()
@@ -73,10 +89,5 @@ public class AppDbContext : DbContext
             .WithOne(t => t.Schedule)
             .HasForeignKey(t => t.ScheduleId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        // Unique email
-        modelBuilder.Entity<User>()
-            .HasIndex(u => u.Email)
-            .IsUnique();
     }
 }

@@ -7,4 +7,6 @@ public class UpdateUserDto
     public string LastName { get; set; } = string.Empty;
 
     public string? PhoneNumber { get; set; }
+
+    public string? Gmail { get; set; }
 }

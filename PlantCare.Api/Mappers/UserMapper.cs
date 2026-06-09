@@ -14,8 +14,7 @@ public static class UserMapper
             Email = dto.Email,
             PhoneNumber = dto.PhoneNumber
 
-            // Do NOT map PasswordHash here
-            // Hash the password in the service
+
         };
     }
 
@@ -33,8 +32,17 @@ public static class UserMapper
 
     public static void UpdateModel(this User user, UpdateUserDto dto)
     {
-        user.Name = dto.Name;
-        user.LastName = dto.LastName;
-        user.PhoneNumber = dto.PhoneNumber;
+        if (!string.IsNullOrWhiteSpace(dto.Name))
+            user.Name = dto.Name;
+
+        if (!string.IsNullOrWhiteSpace(dto.LastName))
+            user.LastName = dto.LastName;
+
+        if (dto.PhoneNumber is not null)
+            user.PhoneNumber = dto.PhoneNumber;
+
+        if (!string.IsNullOrWhiteSpace(dto.Gmail))
+            user.Email = dto.Gmail;
     }
 }
+    

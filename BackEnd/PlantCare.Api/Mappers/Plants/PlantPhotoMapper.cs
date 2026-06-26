@@ -1,5 +1,3 @@
-
-using PlantCare.Api.DTOs.Plants;
 using PlantCare.Api.Models.Plants;
 
 namespace PlantCare.Api.Mappers;
@@ -7,25 +5,26 @@ namespace PlantCare.Api.Mappers;
 public static class PlantPhotoMapper
 {
     // PlantPhoto -> PlantPhotoDto
-    public static PlantPhotoDto ToDto(PlantPhoto photo)
+    public static CreatePlantPhotoDto ToDto(PlantPhoto photo)
     {
-        return new PlantPhotoDto
+        return new CreatePlantPhotoDto
         {
             PlantPhotoId = photo.PlantPhotoId,
             PlantId = photo.PlantId,
-            PhotoUrl = photo.ImageUrl,
-            DateAdded = photo.Date
+            ImageUrl = photo.ImageUrl,
+            Date = photo.Date
         };
     }
 
     // PlantPhotoDto -> PlantPhoto
-    public static PlantPhoto ToModel(PlantPhotoDto dto)
+    public static PlantPhoto ToModel(CreatePlantPhotoDto dto)
     {
         return new PlantPhoto
         {
+            PlantPhotoId = dto.PlantPhotoId,
             PlantId = dto.PlantId,
-            ImageUrl = dto.PhotoUrl,
-            Date = DateTime.UtcNow
+            ImageUrl = dto.ImageUrl,
+            Date = dto.Date
         };
     }
 }

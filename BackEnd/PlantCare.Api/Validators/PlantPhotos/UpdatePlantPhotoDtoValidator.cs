@@ -10,8 +10,12 @@ public class CreatePlantPhotoDtoValidator : AbstractValidator<CreatePlantPhotoDt
         RuleFor(x => x.PlantId)
             .GreaterThan(0);
 
-        RuleFor(x => x.PhotoUrl)
+        RuleFor(x => x.ImageUrl)
             .NotEmpty()
             .MaximumLength(500);
+
+        RuleFor(x => x.Date)
+            .LessThanOrEqualTo(DateTime.UtcNow)
+            .WithMessage("Date cannot be in the future.");
     }
 }

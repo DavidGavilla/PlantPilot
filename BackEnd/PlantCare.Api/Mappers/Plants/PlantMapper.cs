@@ -14,7 +14,8 @@ public static class PlantMapper
             UserId = plant.UserId,
             Name = plant.Name,
             ScientificName = plant.ScientificName,
-            DateAdded = plant.DateAdded
+            DateAdded = plant.DateAdded,
+            SoilMoistureLevel = plant.SoilMoistureLevel
         };
     }
 
@@ -32,7 +33,8 @@ public static class PlantMapper
             UserId = dto.UserId,
             Name = dto.Name,
             ScientificName = dto.ScientificName,
-            DateAdded = DateTime.UtcNow
+            DateAdded = DateTime.UtcNow,
+            SoilMoistureLevel = dto.SoilMoistureLevel
         };
     }
 

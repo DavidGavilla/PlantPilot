@@ -19,4 +19,6 @@ public class Plant
     public ICollection<PlantPhoto> Photos { get; set; } = new List<PlantPhoto>();
 
     public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
+
+    public int? SoilMoistureLevel { get; set; }    
 }

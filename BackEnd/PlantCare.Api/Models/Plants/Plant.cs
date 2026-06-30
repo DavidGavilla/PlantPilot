@@ -21,4 +21,5 @@ public class Plant
     public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
 
     public int? SoilMoistureLevel { get; set; }    
+    public List<PlantDevice> PlantDevices { get; set; } = new();
 }

@@ -3,7 +3,7 @@ namespace PlantCare.Api.Models.Devices;
 public class Device
 {
     public int DeviceId { get; set; }
-
+ 
     public int UserId { get; set; }
 
     public string Name { get; set; } = string.Empty;

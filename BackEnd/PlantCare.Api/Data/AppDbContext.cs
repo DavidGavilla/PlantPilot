@@ -3,6 +3,7 @@ using PlantCare.Api.Models;
 using PlantCare.Api.Models.Plants;
 using PlantCare.Api.Models.Diagnoses;
 using PlantCare.Api.Models.Schedules;
+using PlantCare.Api.Models.Devices;
 
 namespace PlantCare.Api.Data;
 
@@ -20,6 +21,12 @@ public class AppDbContext : DbContext
     public DbSet<DiagnosisProblem> DiagnosisProblems => Set<DiagnosisProblem>();
     public DbSet<Schedule> Schedules => Set<Schedule>();
     public DbSet<ScheduleTask> ScheduleTasks => Set<ScheduleTask>();
+
+    public DbSet<Device> Devices => Set<Device>();
+    public DbSet<PlantDevice> PlantDevices => Set<PlantDevice>();
+    public DbSet<DeviceCommand> DeviceCommands => Set<DeviceCommand>();
+    public DbSet<DeviceEvent> DeviceEvents => Set<DeviceEvent>();
+    public DbSet<DeviceReading> DeviceReadings => Set<DeviceReading>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -41,6 +48,13 @@ public class AppDbContext : DbContext
             .HasForeignKey(p => p.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        // User 1 -> Many Devices
+        modelBuilder.Entity<User>()
+            .HasMany<Device>()
+            .WithOne()
+            .HasForeignKey(d => d.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         // Plant 1 -> Many Photos
         modelBuilder.Entity<Plant>()
             .HasMany(p => p.Photos)
@@ -55,7 +69,6 @@ public class AppDbContext : DbContext
             .HasForeignKey<Diagnosis>(d => d.PlantPhotoId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // Enforce one diagnosis per photo
         modelBuilder.Entity<Diagnosis>()
             .HasIndex(d => d.PlantPhotoId)
             .IsUnique();
@@ -75,7 +88,6 @@ public class AppDbContext : DbContext
             .OnDelete(DeleteBehavior.Cascade);
 
         // Diagnosis 1 -> 0..1 Schedule
-        // Schedule can exist without Diagnosis
         modelBuilder.Entity<Diagnosis>()
             .HasOne(d => d.Schedule)
             .WithOne(s => s.Diagnosis)
@@ -89,5 +101,55 @@ public class AppDbContext : DbContext
             .WithOne(t => t.Schedule)
             .HasForeignKey(t => t.ScheduleId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        // Device 1 -> Many PlantDevices
+        modelBuilder.Entity<Device>()
+            .HasMany(d => d.PlantDevices)
+            .WithOne(pd => pd.Device)
+            .HasForeignKey(pd => pd.DeviceId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Plant 1 -> Many PlantDevices
+        modelBuilder.Entity<Plant>()
+            .HasMany<PlantDevice>()
+            .WithOne()
+            .HasForeignKey(pd => pd.PlantId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Avoid duplicate device-plant links
+        modelBuilder.Entity<PlantDevice>()
+            .HasIndex(pd => new { pd.DeviceId, pd.PlantId })
+            .IsUnique();
+
+        // PlantDevice 1 -> Many Commands
+        modelBuilder.Entity<PlantDevice>()
+            .HasMany<DeviceCommand>()
+            .WithOne()
+            .HasForeignKey(dc => dc.PlantDeviceId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // PlantDevice 1 -> Many Events
+        modelBuilder.Entity<PlantDevice>()
+            .HasMany<DeviceEvent>()
+            .WithOne()
+            .HasForeignKey(de => de.PlantDeviceId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // PlantDevice 1 -> Many Readings
+        modelBuilder.Entity<PlantDevice>()
+            .HasMany<DeviceReading>()
+            .WithOne()
+            .HasForeignKey(dr => dr.PlantDeviceId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // ApiKeyHash required
+        modelBuilder.Entity<Device>()
+            .Property(d => d.ApiKeyHash)
+            .IsRequired();
+
+        // Battery level default
+        modelBuilder.Entity<Device>()
+            .Property(d => d.BatteryLevel)
+            .HasDefaultValue(100);
     }
 }

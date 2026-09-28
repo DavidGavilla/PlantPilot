@@ -1,5 +1,12 @@
 namespace PlantCare.Api.Models.Schedules;
 
+public enum ScheduleTaskStatus
+{
+    Pending,
+    Completed,
+    Cancelled
+}
+
 public class ScheduleTask
 {
     public int TaskId { get; set; }
@@ -16,7 +23,9 @@ public class ScheduleTask
 
     public string TaskDescription { get; set; } = string.Empty;
 
-    public bool IsCompleted { get; set; }
+    public ScheduleTaskStatus Status { get; set; } = ScheduleTaskStatus.Pending;
 
     public DateTime? CompletedAt { get; set; }
+
+    public DateTime? CancelledAt { get; set; }
 }

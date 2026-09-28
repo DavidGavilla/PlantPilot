@@ -6,7 +6,7 @@ public class ScheduleDto
 
     public int PlantId { get; set; }
 
-    public int DiagnosisId { get; set; }
+    public int? DiagnosisId { get; set; }
 
     public DateTime DateAdded { get; set; }
 

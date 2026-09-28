@@ -7,7 +7,7 @@ public class CreateDeviceCommandDtoValidator : AbstractValidator<CreateDeviceCom
 {
     public CreateDeviceCommandDtoValidator()
     {
-        RuleFor(x => x.PlantDeviceId)
+        RuleFor(x => x.DeviceId)
             .GreaterThan(0);
 
         RuleFor(x => x.CommandType)

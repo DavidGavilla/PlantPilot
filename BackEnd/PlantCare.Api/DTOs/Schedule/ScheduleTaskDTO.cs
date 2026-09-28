@@ -1,3 +1,5 @@
+using PlantCare.Api.Models.Schedules;
+
 namespace PlantCare.Api.DTOs.Schedules;
 
 public class ScheduleTaskDto
@@ -12,5 +14,9 @@ public class ScheduleTaskDto
 
     public string TaskDescription { get; set; } = string.Empty;
 
-    public bool IsCompleted { get; set; }
+    public ScheduleTaskStatus Status { get; set; }
+
+    public DateTime? CompletedAt { get; set; }
+
+    public DateTime? CancelledAt { get; set; }
 }

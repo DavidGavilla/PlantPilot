@@ -10,11 +10,12 @@ public static class DeviceReadingMapper
         return new DeviceReadingDto
         {
             DeviceReadingId = reading.DeviceReadingId,
-            PlantDeviceId = reading.PlantDeviceId,
-            CreatedAt = reading.CreatedAt,
+            ChannelId = reading.ChannelId,
             ReadingType = reading.ReadingType,
             Value = reading.Value,
-            Unit = reading.Unit
+            Unit = reading.Unit,
+            MeasuredAt = reading.MeasuredAt,
+            ReceivedAt = reading.ReceivedAt
         };
     }
 
@@ -22,10 +23,11 @@ public static class DeviceReadingMapper
     {
         return new DeviceReading
         {
-            PlantDeviceId = dto.PlantDeviceId,
+            ChannelId = dto.ChannelId,
             ReadingType = dto.ReadingType,
             Value = dto.Value,
-            Unit = dto.Unit
+            Unit = dto.Unit,
+            MeasuredAt = dto.MeasuredAt
         };
     }
 }

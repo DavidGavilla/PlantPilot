@@ -10,11 +10,14 @@ public static class DeviceCommandMapper
         return new DeviceCommandDto
         {
             DeviceCommandId = command.DeviceCommandId,
-            PlantDeviceId = command.PlantDeviceId,
+            DeviceId = command.DeviceId,
+            ChannelId = command.ChannelId,
             CommandType = command.CommandType,
             DurationSeconds = command.DurationSeconds,
             WaterAmountMl = command.WaterAmountMl,
             Status = command.Status,
+            IdempotencyKey = command.IdempotencyKey,
+            ExpiresAt = command.ExpiresAt,
             DateCreated = command.DateCreated,
             CompletedDate = command.CompletedDate
         };
@@ -24,10 +27,13 @@ public static class DeviceCommandMapper
     {
         return new DeviceCommand
         {
-            PlantDeviceId = dto.PlantDeviceId,
+            DeviceId = dto.DeviceId,
+            ChannelId = dto.ChannelId,
             CommandType = dto.CommandType,
             DurationSeconds = dto.DurationSeconds,
-            WaterAmountMl = dto.WaterAmountMl
+            WaterAmountMl = dto.WaterAmountMl,
+            IdempotencyKey = dto.IdempotencyKey,
+            ExpiresAt = dto.ExpiresAt
         };
     }
 }

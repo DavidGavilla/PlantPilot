@@ -16,6 +16,13 @@ TestResults/
 # Rider
 .idea/
 
+# Claude Code local runtime state (not shareable config)
+.claude/scheduled_tasks.lock
+.claude/settings.json.graphify-bak
+
+# Graphify local cache (per-file AST cache, not meant to be committed)
+BackEnd/graphify-out/cache/
+
 # Visual Studio Code
 .vscode/
 

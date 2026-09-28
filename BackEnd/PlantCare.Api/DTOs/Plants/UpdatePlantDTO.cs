@@ -8,4 +8,7 @@ public class UpdatePlantDto
 
     public int? SoilMoistureLevel { get; set; }
 
+    // Explicit null in the payload means "clear the plot".
+    public int? PlotId { get; set; }
+
 }

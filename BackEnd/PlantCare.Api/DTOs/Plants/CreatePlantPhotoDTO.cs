@@ -1,3 +1,5 @@
+using PlantCare.Api.Models.Plants;
+
 public class CreatePlantPhotoDto
 {
     public int PlantPhotoId { get; set; }
@@ -6,7 +8,9 @@ public class CreatePlantPhotoDto
 
     public string ImageUrl { get; set; } = string.Empty;
 
-    public DateTime Date { get; set; } = DateTime.UtcNow;
+    public PlantPhotoSource Source { get; set; }
 
+    public int? CameraChannelId { get; set; }
 
+    public DateTime CapturedAt { get; set; } = DateTime.UtcNow;
 }

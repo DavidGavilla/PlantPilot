@@ -1,0 +1,30 @@
+{
+  "enabledPlugins": {
+    "dotnet@dotnet-agent-skills": true,
+    "dotnet-aspnetcore@dotnet-agent-skills": true,
+    "dotnet-data@dotnet-agent-skills": true,
+    "dotnet-test@dotnet-agent-skills": true
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/DavidGavilla/.local/bin/graphify.EXE hook-guard search"
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/DavidGavilla/.local/bin/graphify.EXE hook-guard read"
+          }
+        ]
+      }
+    ]
+  }
+}

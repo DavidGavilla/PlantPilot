@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  # Ephemeral password for the CI-only SQL Server container. Not a real secret:
+  # the container is created and destroyed within this job and never exposed
+  # externally. Do not reuse this value anywhere else.
+  MSSQL_SA_PASSWORD: 'P@ssw0rd_CI_Only!'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          ACCEPT_EULA: "Y"
+          MSSQL_SA_PASSWORD: 'P@ssw0rd_CI_Only!'
+        ports:
+          - 1433:1433
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore
+        working-directory: BackEnd
+        run: dotnet restore
+
+      - name: Build
+        working-directory: BackEnd
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Wait for SQL Server
+        run: |
+          container_id=$(docker ps -q --filter "ancestor=mcr.microsoft.com/mssql/server:2022-latest")
+          for i in $(seq 1 30); do
+            if docker exec "$container_id" /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "$MSSQL_SA_PASSWORD" -C -Q "SELECT 1" > /dev/null 2>&1; then
+              echo "SQL Server is ready"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "SQL Server did not become ready in time" >&2
+          exit 1
+
+      - name: Restore EF Core tool
+        working-directory: BackEnd/PlantCare.Api
+        run: dotnet tool restore
+
+      - name: Apply EF Core migrations
+        working-directory: BackEnd/PlantCare.Api
+        run: >-
+          dotnet ef database update
+          --connection "Server=localhost,1433;Database=PlantCareDb;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True"
+
+      - name: Test
+        working-directory: BackEnd
+        run: dotnet test --no-build --configuration Release --logger trx --results-directory TestResults
+
+      - name: Publish test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: BackEnd/**/TestResults/*.trx
+
+      - name: Check for vulnerable packages
+        # No .sln ties the two projects together, so `dotnet list package` needs a target per project.
+        working-directory: BackEnd
+        run: |
+          dotnet list PlantCare.Api package --vulnerable --include-transitive
+          dotnet list PlantCare.Api.Tests package --vulnerable --include-transitive

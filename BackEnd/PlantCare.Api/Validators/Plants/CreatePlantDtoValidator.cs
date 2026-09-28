@@ -7,9 +7,6 @@ public class CreatePlantDtoValidator : AbstractValidator<CreatePlantDto>
 {
     public CreatePlantDtoValidator()
     {
-        RuleFor(x => x.UserId)
-            .GreaterThan(0);
-
         RuleFor(x => x.Name)
             .NotEmpty()
             .MaximumLength(100);

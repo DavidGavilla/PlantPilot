@@ -10,9 +10,12 @@ public static class DiagnosisMapper
         return new Diagnosis
         {
             PlantPhotoId = dto.PlantPhotoId,
-            IsHealthy = dto.IsHealthy,
+            HealthStatus = dto.HealthStatus,
+            AnalysisStatus = dto.AnalysisStatus,
             HealthProbability = dto.HealthProbability,
             AiProvider = dto.AiProvider,
+            AiModel = dto.AiModel,
+            AiModelVersion = dto.AiModelVersion,
             Summary = dto.Summary,
             RawAiResponse = dto.RawAiResponse,
 
@@ -30,9 +33,12 @@ public static class DiagnosisMapper
         {
             DiagnosisId = diagnosis.DiagnosisId,
             PlantPhotoId = diagnosis.PlantPhotoId,
-            IsHealthy = diagnosis.IsHealthy,
+            HealthStatus = diagnosis.HealthStatus,
+            AnalysisStatus = diagnosis.AnalysisStatus,
             HealthProbability = diagnosis.HealthProbability,
             AiProvider = diagnosis.AiProvider,
+            AiModel = diagnosis.AiModel,
+            AiModelVersion = diagnosis.AiModelVersion,
             Summary = diagnosis.Summary,
             CreatedAt = diagnosis.CreatedAt,
 

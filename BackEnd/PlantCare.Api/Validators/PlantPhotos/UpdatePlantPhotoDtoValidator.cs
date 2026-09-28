@@ -14,8 +14,8 @@ public class CreatePlantPhotoDtoValidator : AbstractValidator<CreatePlantPhotoDt
             .NotEmpty()
             .MaximumLength(500);
 
-        RuleFor(x => x.Date)
+        RuleFor(x => x.CapturedAt)
             .LessThanOrEqualTo(DateTime.UtcNow)
-            .WithMessage("Date cannot be in the future.");
+            .WithMessage("CapturedAt cannot be in the future.");
     }
 }

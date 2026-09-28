@@ -7,7 +7,7 @@ public class CreateDeviceReadingDtoValidator : AbstractValidator<CreateDeviceRea
 {
     public CreateDeviceReadingDtoValidator()
     {
-        RuleFor(x => x.PlantDeviceId)
+        RuleFor(x => x.ChannelId)
             .GreaterThan(0);
 
         RuleFor(x => x.ReadingType)

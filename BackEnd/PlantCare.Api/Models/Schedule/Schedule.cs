@@ -11,9 +11,9 @@ public class Schedule
 
     public Plant Plant { get; set; } = null!;
 
-    public int DiagnosisId { get; set; }
+    public int? DiagnosisId { get; set; }
 
-    public Diagnosis Diagnosis { get; set; } = null!;
+    public Diagnosis? Diagnosis { get; set; }
 
     public DateTime DateAdded { get; set; } = DateTime.UtcNow;
 

@@ -12,10 +12,17 @@ public static class PlantMapper
         {
             PlantId = plant.PlantId,
             UserId = plant.UserId,
+            WorkspaceId = plant.WorkspaceId,
+            PlotId = plant.PlotId,
+            PlotName = plant.Plot?.Name,
+            FarmId = plant.Plot?.FarmId,
+            FarmName = plant.Plot?.Farm?.Name,
             Name = plant.Name,
             ScientificName = plant.ScientificName,
             DateAdded = plant.DateAdded,
-            SoilMoistureLevel = plant.SoilMoistureLevel
+            SoilMoistureLevel = plant.SoilMoistureLevel,
+            IsArchived = plant.IsArchived,
+            ArchivedAt = plant.ArchivedAt
         };
     }
 
@@ -26,15 +33,17 @@ public static class PlantMapper
     }
 
     // CreatePlantDto -> Plant
+    // UserId/WorkspaceId are NOT set here — the service sets them from the route parameters, never
+    // from client input.
     public static Plant ToModel(CreatePlantDto dto)
     {
         return new Plant
         {
-            UserId = dto.UserId,
             Name = dto.Name,
             ScientificName = dto.ScientificName,
             DateAdded = DateTime.UtcNow,
-            SoilMoistureLevel = dto.SoilMoistureLevel
+            SoilMoistureLevel = dto.SoilMoistureLevel,
+            PlotId = dto.PlotId
         };
     }
 
@@ -43,5 +52,7 @@ public static class PlantMapper
     {
         plant.Name = dto.Name;
         plant.ScientificName = dto.ScientificName;
+        plant.SoilMoistureLevel = dto.SoilMoistureLevel;
+        plant.PlotId = dto.PlotId;
     }
 }

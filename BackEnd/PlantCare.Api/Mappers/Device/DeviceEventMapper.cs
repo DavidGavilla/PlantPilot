@@ -10,10 +10,14 @@ public static class DeviceEventMapper
         return new DeviceEventDto
         {
             DeviceEventId = deviceEvent.DeviceEventId,
-            PlantDeviceId = deviceEvent.PlantDeviceId,
+            DeviceId = deviceEvent.DeviceId,
+            ChannelId = deviceEvent.ChannelId,
+            IrrigationZoneId = deviceEvent.IrrigationZoneId,
+            DeviceCommandId = deviceEvent.DeviceCommandId,
             StartedAt = deviceEvent.StartedAt,
             DurationSeconds = deviceEvent.DurationSeconds,
             WaterAmountMl = deviceEvent.WaterAmountMl,
+            WaterAmountSource = deviceEvent.WaterAmountSource,
             TriggerType = deviceEvent.TriggerType,
             Status = deviceEvent.Status
         };

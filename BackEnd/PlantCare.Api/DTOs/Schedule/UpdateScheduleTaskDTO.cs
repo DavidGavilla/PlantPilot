@@ -1,6 +1,8 @@
+using PlantCare.Api.Models.Schedules;
+
 namespace PlantCare.Api.DTOs.Schedules;
 
 public class UpdateScheduleTaskDto
 {
-    public bool IsCompleted { get; set; }
+    public ScheduleTaskStatus Status { get; set; }
 }

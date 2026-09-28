@@ -12,7 +12,9 @@ public static class PlantPhotoMapper
             PlantPhotoId = photo.PlantPhotoId,
             PlantId = photo.PlantId,
             ImageUrl = photo.ImageUrl,
-            Date = photo.Date
+            Source = photo.Source,
+            CameraChannelId = photo.CameraChannelId,
+            CapturedAt = photo.CapturedAt
         };
     }
 
@@ -24,7 +26,9 @@ public static class PlantPhotoMapper
             PlantPhotoId = dto.PlantPhotoId,
             PlantId = dto.PlantId,
             ImageUrl = dto.ImageUrl,
-            Date = dto.Date
+            Source = dto.Source,
+            CameraChannelId = dto.CameraChannelId,
+            CapturedAt = dto.CapturedAt
         };
     }
 }

@@ -11,7 +11,8 @@ public class CreateScheduleDtoValidator : AbstractValidator<CreateScheduleDto>
             .GreaterThan(0);
 
         RuleFor(x => x.DiagnosisId)
-            .GreaterThan(0);
+            .GreaterThan(0)
+            .When(x => x.DiagnosisId.HasValue);
 
         RuleFor(x => x.Tasks)
             .NotEmpty();

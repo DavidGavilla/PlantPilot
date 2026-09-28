@@ -1,0 +1,860 @@
+{
+  "PlantCare.Api.Tests/PlantCare.Api.Tests.csproj": {
+    "mtime": 1790590413.937304,
+    "seen": 1790590879.784673,
+    "ast_hash": "7e284bf6c092a86946a76c68da3d5175",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Validators/Diagnoses/CreateDiagnosisDtoValidatorTest.cs": {
+    "mtime": 1790575640.8328557,
+    "seen": 1790582951.716218,
+    "ast_hash": "515a2ac4af968126f45893f150b2d7ea",
+    "semantic_hash": "515a2ac4af968126f45893f150b2d7ea"
+  },
+  "PlantCare.Api.Tests/Validators/Diagnoses/CreateDiagnosisProblemTest.cs": {
+    "mtime": 1790575640.8341072,
+    "seen": 1790582951.7162218,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/.config/dotnet-tools.json": {
+    "mtime": 1790577097.6595266,
+    "seen": 1790582951.716224,
+    "ast_hash": "3c9637df0af1d0fcd44c5c873ca47f9c",
+    "semantic_hash": "3c9637df0af1d0fcd44c5c873ca47f9c"
+  },
+  "PlantCare.Api/Controllers/Devices/DevicesController.cs": {
+    "mtime": 1790591492.1728692,
+    "seen": 1790591966.3333669,
+    "ast_hash": "8bbea0868e9eb2d6c8a8a1fdd5122389",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Device/DeviceCommandDtos.cs": {
+    "mtime": 1790586053.5537357,
+    "seen": 1790586982.8078353,
+    "ast_hash": "42816196c2c3755e61949730453d14d7",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Device/DeviceDtos.cs": {
+    "mtime": 1790575640.8420658,
+    "seen": 1790582951.716231,
+    "ast_hash": "c0992179085ddfc0c19d07908f4ed0d1",
+    "semantic_hash": "c0992179085ddfc0c19d07908f4ed0d1"
+  },
+  "PlantCare.Api/DTOs/Device/DeviceEventDtos.cs": {
+    "mtime": 1790584923.5233629,
+    "seen": 1790586982.8078394,
+    "ast_hash": "2ac25e04dce1395ed3264812f4ad3de8",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Device/DeviceReadingDtos.cs": {
+    "mtime": 1790584861.5644908,
+    "seen": 1790586982.8078423,
+    "ast_hash": "3b647269f903e0fd4c855ce9840b01aa",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Device/PlantDeviceDtos.cs": {
+    "mtime": 1790575640.8469472,
+    "seen": 1790582951.716236,
+    "ast_hash": "642c54a5d61bdec63d76c9db8ab7bab3",
+    "semantic_hash": "642c54a5d61bdec63d76c9db8ab7bab3"
+  },
+  "PlantCare.Api/DTOs/Diagnosis/CreateDiagnosisDTO.cs": {
+    "mtime": 1790585162.6632113,
+    "seen": 1790586982.807847,
+    "ast_hash": "4b1f20d0db70b969a4c6e238e5b98a5d",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Diagnosis/CreateDiagnosisProblemDTO.cs": {
+    "mtime": 1790575640.850195,
+    "seen": 1790582951.71624,
+    "ast_hash": "6d8014ead06bbf90dc59e28449bbe629",
+    "semantic_hash": "6d8014ead06bbf90dc59e28449bbe629"
+  },
+  "PlantCare.Api/DTOs/Diagnosis/DiagnosisDTO.cs": {
+    "mtime": 1790585146.622862,
+    "seen": 1790586982.8078506,
+    "ast_hash": "2e7a667460e21d64cddfd4496adaef86",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Diagnosis/DiagnosisProblemsDTO.cs": {
+    "mtime": 1790575640.8521914,
+    "seen": 1790582951.7162428,
+    "ast_hash": "17a970df34138de10182d10a226faec4",
+    "semantic_hash": "17a970df34138de10182d10a226faec4"
+  },
+  "PlantCare.Api/DTOs/LoginUserDTO.cs": {
+    "mtime": 1790575640.8532164,
+    "seen": 1790582951.7162442,
+    "ast_hash": "18aff5988a19edef00fa9ce2f5170478",
+    "semantic_hash": "18aff5988a19edef00fa9ce2f5170478"
+  },
+  "PlantCare.Api/DTOs/Plants/CreatePlantDTO.cs": {
+    "mtime": 1790589413.7789085,
+    "seen": 1790589710.3527083,
+    "ast_hash": "f83c468fd1a80d6d03cdb5dacc9a6a1e",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Plants/CreatePlantPhotoDTO.cs": {
+    "mtime": 1790585434.2784321,
+    "seen": 1790586982.8078582,
+    "ast_hash": "6da3c5961bc58ba876941697c37f476a",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Plants/PlantsDTO.cs": {
+    "mtime": 1790589412.8444638,
+    "seen": 1790589710.3527112,
+    "ast_hash": "741c01460877c6ac5b1f999c85751cd0",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Plants/UpdatePlantDTO.cs": {
+    "mtime": 1790589415.1284747,
+    "seen": 1790589710.3527122,
+    "ast_hash": "cc0d8b3cecb56bbb881e171977b0aa81",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/RegisterUserDTO.cs": {
+    "mtime": 1790575640.862789,
+    "seen": 1790582951.7162523,
+    "ast_hash": "2f28d6083b7557f9c5aafd7ba9ac9ea6",
+    "semantic_hash": "2f28d6083b7557f9c5aafd7ba9ac9ea6"
+  },
+  "PlantCare.Api/DTOs/Schedule/CreateScheduleDTO.cs": {
+    "mtime": 1790585238.4657238,
+    "seen": 1790586982.8078656,
+    "ast_hash": "ca8bb844149542a2eeea4978c09d37c4",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Schedule/CreateScheduleTaskDTO.cs": {
+    "mtime": 1790575640.8664389,
+    "seen": 1790582951.7162554,
+    "ast_hash": "2f14b4ed94fa75f370419f14ea00e169",
+    "semantic_hash": "2f14b4ed94fa75f370419f14ea00e169"
+  },
+  "PlantCare.Api/DTOs/Schedule/ScheduleDTO.cs": {
+    "mtime": 1790585228.1124525,
+    "seen": 1790586982.8078692,
+    "ast_hash": "c612a20be7d2e9b71370856ba6ddd53e",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Schedule/ScheduleTaskDTO.cs": {
+    "mtime": 1790585326.6285517,
+    "seen": 1790586982.8078706,
+    "ast_hash": "2194e3f9d89f46ed224b79638b800453",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Schedule/UpdateScheduleTaskDTO.cs": {
+    "mtime": 1790585336.827751,
+    "seen": 1790586982.807873,
+    "ast_hash": "122e85c01a10d6ff9bb1dd3a04dbb695",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/UpdateUserDTO.cs": {
+    "mtime": 1790575640.8698535,
+    "seen": 1790582951.7162623,
+    "ast_hash": "57b4890d0d89da21c82cdf233cd15655",
+    "semantic_hash": "57b4890d0d89da21c82cdf233cd15655"
+  },
+  "PlantCare.Api/DTOs/UserDTO.cs": {
+    "mtime": 1790575640.872291,
+    "seen": 1790582951.716264,
+    "ast_hash": "17ce5c7a66e5db4f9e66aec300be03ba",
+    "semantic_hash": "17ce5c7a66e5db4f9e66aec300be03ba"
+  },
+  "PlantCare.Api/Data/AppDbContext.cs": {
+    "mtime": 1790594823.3246715,
+    "seen": 1790595580.7914584,
+    "ast_hash": "b9cec1923c28df6ec4978bff658017e6",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Device/DeviceCommandMapper.cs": {
+    "mtime": 1790584911.64904,
+    "seen": 1790586982.8078797,
+    "ast_hash": "475974000b9071e9ca5c02f7f8d2004c",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Device/DeviceEventMapper.cs": {
+    "mtime": 1790584946.9026034,
+    "seen": 1790586982.8078814,
+    "ast_hash": "7cabf2558d754669d47db75198c58b45",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Device/DeviceMapper.cs": {
+    "mtime": 1790575640.8793285,
+    "seen": 1790582951.71627,
+    "ast_hash": "87fb6bc83e490750fac22c2397db816d",
+    "semantic_hash": "87fb6bc83e490750fac22c2397db816d"
+  },
+  "PlantCare.Api/Mappers/Device/DeviceReadingMapper.cs": {
+    "mtime": 1790584876.1451888,
+    "seen": 1790586982.8078847,
+    "ast_hash": "18ea4a453dcd003126ab9a1731d21441",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Device/PlantDeviceMapper.cs": {
+    "mtime": 1790575640.8890092,
+    "seen": 1790582951.7162733,
+    "ast_hash": "3a2d18908b6a4899a8ecf048593008ca",
+    "semantic_hash": "3a2d18908b6a4899a8ecf048593008ca"
+  },
+  "PlantCare.Api/Mappers/Diagnosis/DiagnosisMapper.cs": {
+    "mtime": 1790585182.4045327,
+    "seen": 1790586982.8078878,
+    "ast_hash": "73b5f3db822b5442dc7880c025957099",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Diagnosis/DiagnosisProblemMapper.cs": {
+    "mtime": 1790575640.8930337,
+    "seen": 1790582951.7162762,
+    "ast_hash": "e65d33ba6695ae9694f399edaeac686e",
+    "semantic_hash": "e65d33ba6695ae9694f399edaeac686e"
+  },
+  "PlantCare.Api/Mappers/Plants/PlantMapper.cs": {
+    "mtime": 1790589417.549647,
+    "seen": 1790589710.352737,
+    "ast_hash": "7ec12573ffa641f522cc820de7f134a0",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Plants/PlantPhotoMapper.cs": {
+    "mtime": 1790585450.6798942,
+    "seen": 1790586982.807894,
+    "ast_hash": "bf772a29c64f431e24036c2c1cdf33a6",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/Schedule/ScheduleMapper.cs": {
+    "mtime": 1790575640.8985426,
+    "seen": 1790582951.7162812,
+    "ast_hash": "596a99ad0bd270edd8d308fd773a32e7",
+    "semantic_hash": "596a99ad0bd270edd8d308fd773a32e7"
+  },
+  "PlantCare.Api/Mappers/Schedule/ScheduleTaskMapper.cs": {
+    "mtime": 1790585354.9336824,
+    "seen": 1790586982.8078973,
+    "ast_hash": "f28023c8e9cd17b5b3a65dc698c80f63",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Mappers/UserMapper.cs": {
+    "mtime": 1790575640.9005835,
+    "seen": 1790582951.7162845,
+    "ast_hash": "11714a9ffbcde1e50e8d4e597e43a781",
+    "semantic_hash": "11714a9ffbcde1e50e8d4e597e43a781"
+  },
+  "PlantCare.Api/Migrations/20260928065140_InitialCreate.Designer.cs": {
+    "mtime": 1790578300.8918796,
+    "seen": 1790582951.716286,
+    "ast_hash": "b01b88a1a1be3efceb1b1718a2761e93",
+    "semantic_hash": "b01b88a1a1be3efceb1b1718a2761e93"
+  },
+  "PlantCare.Api/Migrations/20260928065140_InitialCreate.cs": {
+    "mtime": 1790578300.8862453,
+    "seen": 1790582951.7162874,
+    "ast_hash": "66a88e834e0174528c9554a220e574bf",
+    "semantic_hash": "66a88e834e0174528c9554a220e574bf"
+  },
+  "PlantCare.Api/Migrations/AppDbContextModelSnapshot.cs": {
+    "mtime": 1790595018.3642745,
+    "seen": 1790595580.7915022,
+    "ast_hash": "04f4030257a4c28df59d711f58584921",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Devices/Device.cs": {
+    "mtime": 1790586033.2451482,
+    "seen": 1790586982.8079145,
+    "ast_hash": "e5d27d7e6cd180ec9bd13b87289d4145",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Devices/DeviceCommand.cs": {
+    "mtime": 1790586039.8717718,
+    "seen": 1790586982.8079176,
+    "ast_hash": "dbcfa460ad005e5b869d3d323877cad9",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Devices/DeviceEvent.cs": {
+    "mtime": 1790584846.9891932,
+    "seen": 1790586982.807919,
+    "ast_hash": "7ce3df01c0ddd6d50cec128adcb22bc3",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Devices/DeviceReading.cs": {
+    "mtime": 1790584805.86961,
+    "seen": 1790586982.8079205,
+    "ast_hash": "1c9a623de463d7b7abd7c3a0156a4673",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Devices/DevicesEnums.cs": {
+    "mtime": 1790575640.9144986,
+    "seen": 1790582951.7162976,
+    "ast_hash": "bfbd685411c20464115c9b64dda01624",
+    "semantic_hash": "bfbd685411c20464115c9b64dda01624"
+  },
+  "PlantCare.Api/Models/Devices/PlantDevice.cs": {
+    "mtime": 1790575640.9174967,
+    "seen": 1790582951.716299,
+    "ast_hash": "d7cbee140a49d597b101d40a43ba404c",
+    "semantic_hash": "d7cbee140a49d597b101d40a43ba404c"
+  },
+  "PlantCare.Api/Models/Diagnosis/Diagnosis.cs": {
+    "mtime": 1790585130.1238236,
+    "seen": 1790586982.8079255,
+    "ast_hash": "36fd671794fd34e97cb4d498d498e474",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Diagnosis/DiagnosisProblems.cs": {
+    "mtime": 1790575640.9238002,
+    "seen": 1790582951.7163022,
+    "ast_hash": "ac02b47b736dfebd65a3cce4adf0bd51",
+    "semantic_hash": "ac02b47b736dfebd65a3cce4adf0bd51"
+  },
+  "PlantCare.Api/Models/Plants/Plant.cs": {
+    "mtime": 1790588922.8676672,
+    "seen": 1790589710.3527777,
+    "ast_hash": "45802f2ccebcf5082af68799488f9b2d",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Plants/PlantPhoto.cs": {
+    "mtime": 1790585400.1582596,
+    "seen": 1790586982.8079379,
+    "ast_hash": "ba2db1864bb33b40697cb7a3159f77f9",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Schedule/Schedule.cs": {
+    "mtime": 1790585200.9182649,
+    "seen": 1790586982.807943,
+    "ast_hash": "2ec672109597a88b6af261ec5a2060f9",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Schedule/ScheduledTask.cs": {
+    "mtime": 1790585313.9644668,
+    "seen": 1790586982.8079448,
+    "ast_hash": "096df167d446379566690d299827741b",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Users.cs": {
+    "mtime": 1790575640.9343958,
+    "seen": 1790582951.7163095,
+    "ast_hash": "bd113f6eb5d5ff93235fb0b9334bfb1f",
+    "semantic_hash": "bd113f6eb5d5ff93235fb0b9334bfb1f"
+  },
+  "PlantCare.Api/PlantCare.Api.csproj": {
+    "mtime": 1790591392.6801424,
+    "seen": 1790591966.3334677,
+    "ast_hash": "b74661e24556a3f32d000b7d0d2b3856",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Program.cs": {
+    "mtime": 1790594924.195582,
+    "seen": 1790595580.791556,
+    "ast_hash": "05194dd02829f05fdcd42a38216a9ea4",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Properties/launchSettings.json": {
+    "mtime": 1790575640.9431658,
+    "seen": 1790582951.716314,
+    "ast_hash": "7147187d07c0578f0cf24ddf9b0d5809",
+    "semantic_hash": "7147187d07c0578f0cf24ddf9b0d5809"
+  },
+  "PlantCare.Api/Services/Device/DeviceService.cs": {
+    "mtime": 1790575640.9457424,
+    "seen": 1790582951.7163155,
+    "ast_hash": "454a601bd1ec83dd1efeb3d913857bcc",
+    "semantic_hash": "454a601bd1ec83dd1efeb3d913857bcc"
+  },
+  "PlantCare.Api/Services/Interfaces/Device/IDeviceCommandService.cs": {
+    "mtime": 1790575640.9484522,
+    "seen": 1790582951.716317,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Device/IDeviceEventService.cs": {
+    "mtime": 1790575640.9494743,
+    "seen": 1790582951.7163184,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Device/IDeviceReadingService.cs": {
+    "mtime": 1790575640.9504771,
+    "seen": 1790582951.71632,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Device/IDeviceService.cs": {
+    "mtime": 1790575640.9524748,
+    "seen": 1790582951.7163215,
+    "ast_hash": "be791950f99cc0b794897617756b3ec0",
+    "semantic_hash": "be791950f99cc0b794897617756b3ec0"
+  },
+  "PlantCare.Api/Services/Interfaces/Device/IPlantDeviceService.cs": {
+    "mtime": 1790575640.9532526,
+    "seen": 1790582951.7163231,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Diagnosis/IDiagnosisService.cs": {
+    "mtime": 1790575640.9553785,
+    "seen": 1790582951.7163246,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Diagnosis/IPlantHealthAiService.cs": {
+    "mtime": 1790575640.956734,
+    "seen": 1790582951.7163262,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Plants/IPlantPhotoService.cs": {
+    "mtime": 1790575640.9580877,
+    "seen": 1790582951.7163277,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Plants/IPlantsService.cs": {
+    "mtime": 1790589432.4526558,
+    "seen": 1790589710.3528092,
+    "ast_hash": "d54c79cce9fba2d2f2dfe7413ac98059",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Schedule/IGeminiScheduleService.cs": {
+    "mtime": 1790575640.9605882,
+    "seen": 1790582951.7163393,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Schedule/IScheduleService.cs": {
+    "mtime": 1790575640.961445,
+    "seen": 1790582951.7163405,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/Storage/IImageStorageService.cs": {
+    "mtime": 1790575640.9635322,
+    "seen": 1790582951.7163415,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Services/Interfaces/User/IUserService.cs": {
+    "mtime": 1790575640.9655252,
+    "seen": 1790582951.7163422,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "PlantCare.Api/Validators/Device/DeviceCommandValidator.cs": {
+    "mtime": 1790585723.774311,
+    "seen": 1790586982.80799,
+    "ast_hash": "1b1cdec0b8a7379847940e0281b7dcf1",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Validators/Device/DeviceReadingValidator.cs": {
+    "mtime": 1790585708.797035,
+    "seen": 1790586982.8079922,
+    "ast_hash": "c62fc3aab4abca131eaa248d5691c391",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Validators/Device/DeviceValidator.cs": {
+    "mtime": 1790575640.972584,
+    "seen": 1790582951.716345,
+    "ast_hash": "759540732b742f5b06389c46afade9e7",
+    "semantic_hash": "759540732b742f5b06389c46afade9e7"
+  },
+  "PlantCare.Api/Validators/Device/PlantDeviceValidator.cs": {
+    "mtime": 1790575640.973585,
+    "seen": 1790582951.716346,
+    "ast_hash": "d37620ddece6ab547bd8eab96aa39161",
+    "semantic_hash": "d37620ddece6ab547bd8eab96aa39161"
+  },
+  "PlantCare.Api/Validators/Diagnoses/CreateDiagnosisDtoValidator.cs": {
+    "mtime": 1790575640.975585,
+    "seen": 1790582951.7163475,
+    "ast_hash": "b9ca3b78523eaf81d2780cbec88afe07",
+    "semantic_hash": "b9ca3b78523eaf81d2780cbec88afe07"
+  },
+  "PlantCare.Api/Validators/Diagnoses/CreateDiagnosisProblemDtoValidator.cs": {
+    "mtime": 1790575640.9774902,
+    "seen": 1790582951.7163484,
+    "ast_hash": "152a31b6acb2c9cd023e5d33f8876ab5",
+    "semantic_hash": "152a31b6acb2c9cd023e5d33f8876ab5"
+  },
+  "PlantCare.Api/Validators/PlantPhotos/UpdatePlantPhotoDtoValidator.cs": {
+    "mtime": 1790585462.0416296,
+    "seen": 1790586982.8080027,
+    "ast_hash": "4f1146f16c40790194c2e449513ab35a",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Validators/Plants/CreatePlantDtoValidator.cs": {
+    "mtime": 1790589416.4343755,
+    "seen": 1790589710.3528306,
+    "ast_hash": "a1077596e5f78efbd0bf1c40c119b89a",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Validators/Plants/UpdatePlantDtoValidator.cs": {
+    "mtime": 1790575640.998866,
+    "seen": 1790582951.7163515,
+    "ast_hash": "64a8fe1fdf3923d4f1555dabe7a57575",
+    "semantic_hash": "64a8fe1fdf3923d4f1555dabe7a57575"
+  },
+  "PlantCare.Api/Validators/Schedules/CreateScheduleDtoValidator.cs": {
+    "mtime": 1790585258.3848946,
+    "seen": 1790586982.808009,
+    "ast_hash": "dc2de5f9d8c8e6fd075a6ceb9fbc173b",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Validators/Schedules/CreateScheduleTaskDtoValidator.cs": {
+    "mtime": 1790575641.0049176,
+    "seen": 1790582951.7163532,
+    "ast_hash": "2a284c6c0826fa61a4074509b78f127a",
+    "semantic_hash": "2a284c6c0826fa61a4074509b78f127a"
+  },
+  "PlantCare.Api/Validators/Schedules/UpdateScheduleTaskDtoValidator.cs": {
+    "mtime": 1790585364.2373333,
+    "seen": 1790586982.8080125,
+    "ast_hash": "e17c2773414a2f848c39f732dfe90db9",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Validators/Users/LogInUserDtoValidator.cs": {
+    "mtime": 1790575641.0095396,
+    "seen": 1790582951.716355,
+    "ast_hash": "6320418d7088d6b69c5fb78f6437b1e2",
+    "semantic_hash": "6320418d7088d6b69c5fb78f6437b1e2"
+  },
+  "PlantCare.Api/Validators/Users/RegisterUserDtoValidator.cs": {
+    "mtime": 1790575641.0109525,
+    "seen": 1790582951.716358,
+    "ast_hash": "6fce9eac1c16f8fa79ca79f8274223a7",
+    "semantic_hash": "6fce9eac1c16f8fa79ca79f8274223a7"
+  },
+  "PlantCare.Api/Validators/Users/UpdateUserDtoValidator.cs": {
+    "mtime": 1790575641.012979,
+    "seen": 1790582951.716359,
+    "ast_hash": "0622347d2f447f69853e5a87b7922023",
+    "semantic_hash": "0622347d2f447f69853e5a87b7922023"
+  },
+  "PlantCare.Api/appsettings.json": {
+    "mtime": 1790591406.563111,
+    "seen": 1790591966.333515,
+    "ast_hash": "0282fbabbdff19b62b5adfb41f4356f0",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1790577706.9804888,
+    "seen": 1790584464.675213,
+    "ast_hash": "ec3406379aad7cd308e67cd121cc65e8",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Validators/Schedules/CreateScheduleDtoValidatorTests.cs": {
+    "mtime": 1790586722.657424,
+    "seen": 1790586982.807822,
+    "ast_hash": "0e772aaf911978633cbaf2452d6ce284",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Validators/Schedules/UpdateScheduleTaskDtoValidatorTests.cs": {
+    "mtime": 1790586736.4757447,
+    "seen": 1790586982.8078268,
+    "ast_hash": "7c2bf9f39e40e2b675626a178772d8b7",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928090503_AddWorkspacesFarmsIrrigationAndDeviceChannels.Designer.cs": {
+    "mtime": 1790586303.604655,
+    "seen": 1790586982.8079052,
+    "ast_hash": "893d0876afecae5a18a04595d194aa94",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928090503_AddWorkspacesFarmsIrrigationAndDeviceChannels.cs": {
+    "mtime": 1790587362.382527,
+    "seen": 1790587830.4418046,
+    "ast_hash": "aadd1e91c281f12bcef198ad304f06b3",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Automation/Alert.cs": {
+    "mtime": 1790585042.5460646,
+    "seen": 1790586982.807911,
+    "ast_hash": "39282916d12bea8b32591f36ad213e44",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Automation/PhotoCaptureSchedule.cs": {
+    "mtime": 1790585026.1059449,
+    "seen": 1790586982.807913,
+    "ast_hash": "d0232024e04b68d15de7a386429da38a",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Devices/DeviceChannel.cs": {
+    "mtime": 1790584749.3070066,
+    "seen": 1790586982.8079164,
+    "ast_hash": "60f211d55f1809b238ed75285c9837fe",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Farms/Farm.cs": {
+    "mtime": 1790584673.5620573,
+    "seen": 1790586982.8079295,
+    "ast_hash": "62592122b6ff95d8111c60c923e7e684",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Farms/Plot.cs": {
+    "mtime": 1790584689.3695807,
+    "seen": 1790586982.807931,
+    "ast_hash": "9bdd263dde5674cf8449c2ff9cd70160",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Irrigation/IrrigationConfig.cs": {
+    "mtime": 1790585008.0805204,
+    "seen": 1790586982.8079321,
+    "ast_hash": "f6eacb2419675e8537ebb18ca26fc34e",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Irrigation/IrrigationZone.cs": {
+    "mtime": 1790584979.862532,
+    "seen": 1790586982.8079333,
+    "ast_hash": "d535c292ce437f0ed7f0df639a898696",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Irrigation/IrrigationZonePlant.cs": {
+    "mtime": 1790587195.8946493,
+    "seen": 1790587830.4418304,
+    "ast_hash": "9cd0a6898913fa5793fc3b36a4a941a8",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Satellite/PlotObservation.cs": {
+    "mtime": 1790585071.657051,
+    "seen": 1790586982.8079393,
+    "ast_hash": "e158978c8046ea634c4f07a6a4b84fcb",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Satellite/SatelliteCheck.cs": {
+    "mtime": 1790585082.8189545,
+    "seen": 1790586982.8079407,
+    "ast_hash": "bc4fbe4182d831bc71cbeeac79e3db61",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Satellite/SatelliteScene.cs": {
+    "mtime": 1790585058.5608547,
+    "seen": 1790586982.807942,
+    "ast_hash": "ec8f166e9ea1f742950c35dc20bb8a09",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Workspaces/Workspace.cs": {
+    "mtime": 1790584637.3940685,
+    "seen": 1790586982.807948,
+    "ast_hash": "c4a1de0ad396f7425235d47b18bdb499",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Workspaces/WorkspaceMember.cs": {
+    "mtime": 1790584652.5018547,
+    "seen": 1790586982.8079495,
+    "ast_hash": "86e5fcfb096457db2124b31b35bb3e68",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928092644_EnforceIrrigationZonePlantWorkspaceMatch.Designer.cs": {
+    "mtime": 1790587604.2577345,
+    "seen": 1790587830.4418063,
+    "ast_hash": "c751b6f5397c95ffaf46c8714be1b625",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928092644_EnforceIrrigationZonePlantWorkspaceMatch.cs": {
+    "mtime": 1790587632.7683156,
+    "seen": 1790587830.4418075,
+    "ast_hash": "91f5fa3b1051789edbfaa2d1ef846386",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Controllers/Farms/FarmsController.cs": {
+    "mtime": 1790591515.652143,
+    "seen": 1790591966.333368,
+    "ast_hash": "0fa0cf393e0cf9fec1e0aa2878d9b1cc",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Controllers/Plants/PlantsController.cs": {
+    "mtime": 1790591508.454254,
+    "seen": 1790591966.333369,
+    "ast_hash": "d313fece6ca94e183c41f734634616f2",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Controllers/Workspaces/WorkspacesController.cs": {
+    "mtime": 1790591523.35716,
+    "seen": 1790591966.3333704,
+    "ast_hash": "2a041b6163fe0b5b4b0c341fff4f22e7",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Common/PagedResult.cs": {
+    "mtime": 1790589376.5621305,
+    "seen": 1790589710.3526902,
+    "ast_hash": "43e94afc48d062479b6bb29e3c241904",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Farms/FarmWithPlotsDto.cs": {
+    "mtime": 1790589394.9269433,
+    "seen": 1790589710.3527052,
+    "ast_hash": "fe234e227829ead0a1bcee782820ff5d",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/DTOs/Workspaces/WorkspaceMembershipDto.cs": {
+    "mtime": 1790589379.29252,
+    "seen": 1790589710.3527246,
+    "ast_hash": "1dfdf850b0108d0c2d0e229a861bd4a4",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928094913_AddPlantArchiving.Designer.cs": {
+    "mtime": 1790588954.0824718,
+    "seen": 1790589710.352752,
+    "ast_hash": "63f62910abd9750f93bbce3a1e4c8938",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928094913_AddPlantArchiving.cs": {
+    "mtime": 1790588954.0814712,
+    "seen": 1790589710.3527532,
+    "ast_hash": "9ea33a126081d638f01b06c0e0e09707",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Farms/FarmService.cs": {
+    "mtime": 1790589397.440526,
+    "seen": 1790589710.352796,
+    "ast_hash": "b9238e6dc3ae1ccc0969701a03edb50b",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Farms/IFarmService.cs": {
+    "mtime": 1790589396.0284514,
+    "seen": 1790589710.3528068,
+    "ast_hash": "9d9478fe1cf6b97074453e68ea9d80ea",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Workspaces/IWorkspaceAccessService.cs": {
+    "mtime": 1790589377.3503294,
+    "seen": 1790589710.3528159,
+    "ast_hash": "20b68336d201966946856358aedd9882",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Workspaces/IWorkspaceService.cs": {
+    "mtime": 1790589380.497348,
+    "seen": 1790589710.3528168,
+    "ast_hash": "f29df79696d35cbf2f1a3bdb56ea2323",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Plants/PlantsService.cs": {
+    "mtime": 1790590351.7053344,
+    "seen": 1790590879.7848651,
+    "ast_hash": "71a1c77e5f9ab534c5dfce7abf1cc66b",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Workspaces/WorkspaceAccessService.cs": {
+    "mtime": 1790589378.2279944,
+    "seen": 1790589710.3528192,
+    "ast_hash": "7495ef5035649bee2b14ceb3856287e7",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Workspaces/WorkspaceService.cs": {
+    "mtime": 1790589381.6153839,
+    "seen": 1790589710.3528202,
+    "ast_hash": "46c397a0ddbaf0dea6bbdc57b647d133",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Fixtures/ApiFixture.cs": {
+    "mtime": 1790590672.5623844,
+    "seen": 1790590879.7846646,
+    "ast_hash": "3981e3853316eb01b27fb7b6e5701fd0",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Plants/PlantsCreateTests.cs": {
+    "mtime": 1790592227.8006682,
+    "seen": 1790593848.590797,
+    "ast_hash": "e276dc080d55c6a159f710c886825a07",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Plants/PlantsDeleteTests.cs": {
+    "mtime": 1790592227.80822,
+    "seen": 1790593848.5907989,
+    "ast_hash": "e060659324112ff1d9b8e2e67832666f",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Plants/PlantsReadTests.cs": {
+    "mtime": 1790592227.8052092,
+    "seen": 1790593848.5907998,
+    "ast_hash": "10c9afe1e833b52af63f5a6bdd5f3579",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Plants/PlantsTestDataSeeder.cs": {
+    "mtime": 1790590587.7014217,
+    "seen": 1790590879.7846823,
+    "ast_hash": "ee3d6ae0a4b0a1e5c4c0fab96758be2d",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Plants/PlantsUpdateTests.cs": {
+    "mtime": 1790592227.8112228,
+    "seen": 1790593848.5908024,
+    "ast_hash": "b05796c66aa73f0ff42f9e42593242d0",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Fixtures/AuthTestHelper.cs": {
+    "mtime": 1790592206.2623012,
+    "seen": 1790593848.5907922,
+    "ast_hash": "7e643a05d118085b9814200197c089aa",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Controllers/ApiControllerBase.cs": {
+    "mtime": 1790591566.6164715,
+    "seen": 1790591966.3333592,
+    "ast_hash": "c86c8e1a004e90fa8158aab18e820887",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Controllers/Auth/AuthController.cs": {
+    "mtime": 1790594911.8445299,
+    "seen": 1790595580.7914007,
+    "ast_hash": "a0a0e114f3f040485f2e6b7d0d5036bc",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Auth/AuthService.cs": {
+    "mtime": 1790594880.418723,
+    "seen": 1790595580.79156,
+    "ast_hash": "daf189b39a500d666c35e9998df2b151",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Auth/JwtTokenService.cs": {
+    "mtime": 1790591444.3655975,
+    "seen": 1790591966.3334715,
+    "ast_hash": "a95c7e5a3b90b868ea38e0df649c47ab",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Auth/IAuthService.cs": {
+    "mtime": 1790594862.8416593,
+    "seen": 1790595580.7915683,
+    "ast_hash": "c4ce5378445648d2b95f65608edb14fe",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Auth/IJwtTokenService.cs": {
+    "mtime": 1790591433.606067,
+    "seen": 1790591966.3334754,
+    "ast_hash": "c4f37cccc7c20c2ae6035789c0a070a0",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api.Tests/Auth/RefreshTokenTests.cs": {
+    "mtime": 1790595329.0376036,
+    "seen": 1790595580.7913444,
+    "ast_hash": "1e071a11cd6742a187d93d1262cb06db",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928113018_AddRefreshTokens.Designer.cs": {
+    "mtime": 1790595018.3632755,
+    "seen": 1790595580.7914984,
+    "ast_hash": "b8283977d6b66383a7311e1c279ef4b1",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Migrations/20260928113018_AddRefreshTokens.cs": {
+    "mtime": 1790595018.3622632,
+    "seen": 1790595580.7915003,
+    "ast_hash": "a4de602c3589f497a17ac1574b11ae0e",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Models/Auth/RefreshToken.cs": {
+    "mtime": 1790594804.3027656,
+    "seen": 1790595580.791504,
+    "ast_hash": "f3354d4e0126decf52e9d56dcb687a60",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Auth/RefreshTokenService.cs": {
+    "mtime": 1790594854.22358,
+    "seen": 1790595580.7915633,
+    "ast_hash": "2516c110b07475cbb30c13a853c95cc5",
+    "semantic_hash": ""
+  },
+  "PlantCare.Api/Services/Interfaces/Auth/IRefreshTokenService.cs": {
+    "mtime": 1790594835.9500415,
+    "seen": 1790595580.7915719,
+    "ast_hash": "c72c67c37feaa0b2535e9df043d431fc",
+    "semantic_hash": ""
+  }
+}

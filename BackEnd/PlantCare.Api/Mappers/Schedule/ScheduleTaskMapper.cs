@@ -13,8 +13,9 @@ public static class ScheduleTaskMapper
             Title = dto.Title,
             TaskType = dto.TaskType,
             TaskDescription = dto.TaskDescription,
-            IsCompleted = false,
-            CompletedAt = null
+            Status = ScheduleTaskStatus.Pending,
+            CompletedAt = null,
+            CancelledAt = null
         };
     }
 
@@ -27,16 +28,22 @@ public static class ScheduleTaskMapper
             Title = task.Title,
             TaskType = task.TaskType,
             TaskDescription = task.TaskDescription,
-            IsCompleted = task.IsCompleted
+            Status = task.Status,
+            CompletedAt = task.CompletedAt,
+            CancelledAt = task.CancelledAt
         };
     }
 
     public static void UpdateModel(this ScheduleTask task, UpdateScheduleTaskDto dto)
     {
-        task.IsCompleted = dto.IsCompleted;
+        task.Status = dto.Status;
 
-        task.CompletedAt = dto.IsCompleted
+        task.CompletedAt = dto.Status == ScheduleTaskStatus.Completed
             ? DateTime.UtcNow
-            : null;
+            : task.CompletedAt;
+
+        task.CancelledAt = dto.Status == ScheduleTaskStatus.Cancelled
+            ? DateTime.UtcNow
+            : task.CancelledAt;
     }
 }

@@ -7,7 +7,7 @@ public class UpdateScheduleTaskDtoValidator : AbstractValidator<UpdateScheduleTa
 {
     public UpdateScheduleTaskDtoValidator()
     {
-        RuleFor(x => x.IsCompleted)
-            .NotNull();
+        RuleFor(x => x.Status)
+            .IsInEnum();
     }
 }
